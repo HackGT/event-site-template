@@ -1,0 +1,19 @@
+@import "../styles/variables.scss";
+
+.mainText {
+    font-size: $subt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    background-color: violet;
+    padding-top: $p2;
+    padding-bottom: $p2;
+    padding-left: $p4;
+    padding-right: $p4;
+}
+
+.bodyText {
+    font-size: $h3 ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
