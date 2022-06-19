@@ -1,7 +1,8 @@
 import NavbarComponent from "./NavbarComponent";
 
 import styles from "./Navbar.module.scss";
-import { VStack } from "@chakra-ui/react";
+import { Menu, MenuButton, IconButton, MenuItem, MenuList} from "@chakra-ui/react";
+import {HamburgerIcon} from "@chakra-ui/icons";
 
 interface Anchor {
   name: string;
@@ -14,11 +15,16 @@ interface NavProps {
 
 const Navbar = (np: NavProps) => {
   return (
-    <VStack className={styles.container} spacing={"30px"}>
+    <div  className={styles.container}>
+    <Menu>
+      <MenuButton as={IconButton} aria-label='Options'icon={<HamburgerIcon />} variant='outline'/>
+    <MenuList>
       {np.anchors.map((anchor) => (
-        <NavbarComponent key={null} name={anchor.name} anchorLink={anchor.id} />
+        <MenuItem><NavbarComponent key={null} name={anchor.name} anchorLink={anchor.id}/></MenuItem>
       ))}
-    </VStack>
+      </MenuList>
+    </Menu>
+    </div>
   );
 };
 
