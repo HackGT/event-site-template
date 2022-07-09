@@ -14,7 +14,7 @@ const QA = (qap: QAProps) => {
   const [questionClicked, setQuestionClicked] = useState(false);
 
   return (
-    <VStack className={styles.qa_shape}>
+    <div className={styles.qa_shape}>
       <Question
         onClick={() => {
           setQuestionClicked(!questionClicked);
@@ -24,7 +24,7 @@ const QA = (qap: QAProps) => {
       <Collapse in={questionClicked} animateOpacity>
         <Answer answer={qap.answer} />
       </Collapse>
-    </VStack>
+    </div>
   );
 };
 
